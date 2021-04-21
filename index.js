@@ -4,6 +4,16 @@ const path = require('path');
 const expresslayouts = require('express-ejs-layouts');
 const { resolve } = require('path');
 
+const db = require('./config/db');
+db.sync()
+    .then(()=>{
+        console.log('Db Conectada');
+    })
+    .catch((e) => {
+        console.log(e);
+    });
+
+
 require ('dotenv').config({
     path: 'variables.env'
 });
