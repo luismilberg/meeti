@@ -9,5 +9,6 @@ module.exports = new Sequelize('meeti', 'postgres', '123456', {
         min: 0,
         acquire: 30000,
         idle: 10000
-    }
+    },
+    // loggin: false
 });
